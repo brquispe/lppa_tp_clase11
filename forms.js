@@ -130,12 +130,10 @@ export class Form {
     const label = input.parentElement.querySelector('label')
     const errorDiv = input.parentElement.querySelector('div.error')
     const mensaje = errorDiv.querySelector('p.errorMessage')
-    console.log(message)
     input.classList.toggle('error', value);
     if (label) label.classList.toggle('error', value);
     if (errorDiv) {
       errorDiv.classList.toggle('error--shown', value)
-      console.log(message)
       errorDiv.querySelector('p.errorMessage').textContent = message;
     }
     if (input.type === 'radio') {
@@ -167,7 +165,6 @@ export class Form {
       const label = input.parentNode.getElementsByTagName('label')[0];
       const res = this.#validateInput(validations, input.value, input.name)
       status = !res.result ? res.result : status;
-      console.log(res)
       if (res.result) {
         this.#setErrorMessageVisibility(input, false, res.message)
         return;

@@ -8,7 +8,6 @@ const frmSubscribeRef = document.getElementById('frmSubscribe');
 const frmSubscribe = new Form(frmSubscribeRef);
 frmSubscribe.onSubmit = async () => {
   const data = frmSubscribe.data;
-  console.log(data);
   const {
     address,
     age,
