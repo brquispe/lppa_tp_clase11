@@ -20,7 +20,7 @@ frmSubscribe.onSubmit = async () => {
     postalcode,
     telephone,
   } = data;
-  const url = `http://curso-dev-2021.herokuapp.com/newsletter?name=${name}&age=${age}&dni=${dni}&city=${city}&email=${email}&password=${password}&postalcode=${postalcode}&telephone=${telephone}&address=${address}`
+  const url = `https://curso-dev-2021.herokuapp.com/newsletter?name=${name}&age=${age}&dni=${dni}&city=${city}&email=${email}&password=${password}&postalcode=${postalcode}&telephone=${telephone}&address=${address}`
   try {
     const resp = await fetch(url);
     if (!resp.ok) {
